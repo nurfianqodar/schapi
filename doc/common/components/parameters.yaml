@@ -1,0 +1,17 @@
+Query_Offset:
+  name: offset
+  in: query
+  schema:
+    type: integer
+    min: 0
+Query_Limit:
+  name: limit
+  in: query
+  schema:
+    type: integer
+    min: 0
+Query_DeletionMode:
+  name: mode
+  in: query
+  schema:
+    $ref: "./schemas.yaml#/DeletionMode"

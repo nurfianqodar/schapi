@@ -1,4 +1,11 @@
+# common/components/schemas.yaml
 DateTime:
   type: string
   format: date-time
   example: 2026-03-03T01:04:17
+DeletionMode:
+  type: string
+  enum:
+    - soft
+    - hard
+  example: soft

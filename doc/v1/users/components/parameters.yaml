@@ -1,0 +1,11 @@
+# v1/users/components/parameters.yaml
+Path_UserID:
+  in: path
+  name: id
+  schema:
+    $ref: "./schemas.yaml#/UserID"
+Query_UserRole:
+  in: query
+  name: role
+  schema:
+    $ref: "./schemas.yaml#/UserRole"

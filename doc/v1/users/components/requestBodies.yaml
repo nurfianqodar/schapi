@@ -1,3 +1,4 @@
+# v1/users/components/requestBodies.yaml
 CreateUser:
   description: Create user request
   content:

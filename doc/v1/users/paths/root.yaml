@@ -3,6 +3,13 @@ get:
   tags:
     - users
   summary: List users
+  parameters:
+    - $ref: "../../../common/components/parameters.yaml#/Query_Limit"
+    - $ref: "../../../common/components/parameters.yaml#/Query_Offset"
+    - $ref: "../components/parameters.yaml#/Query_UserRole"
+  responses:
+    "200":
+      $ref: "../components/responses.yaml#/ListUser"
 post:
   tags:
     - users

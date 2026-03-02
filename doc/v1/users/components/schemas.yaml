@@ -1,15 +1,21 @@
+# v1/users/schemas.yaml
 UserID:
   type: string
   format: uuid
   example: 2bf10c20-0331-457d-a5d5-c5eff548b5c9
+  minLength: 36
+  maxLength: 36
 Email:
   type: string
   format: email
   example: users@email.com
+  maxLength: 254
 Password:
   type: string
   format: password
   example: secret1234
+  minLength: 8
+  maxLength: 128
 UserRole:
   type: string
   enum:
@@ -19,3 +25,16 @@ UserRole:
     - teacher
     - student
     - parent
+User:
+  type: object
+  properties:
+    id:
+      $ref: "#/UserID"
+    email:
+      $ref: "#/Email"
+    role:
+      $ref: "#/UserRole"
+    createdAt:
+      $ref: "../../../common/components/schemas.yaml#/DateTime"
+    updatedAt:
+      $ref: "../../../common/components/schemas.yaml#/DateTime"

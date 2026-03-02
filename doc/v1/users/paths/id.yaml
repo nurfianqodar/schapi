@@ -3,3 +3,27 @@ get:
   summary: Get user by id
   tags:
     - users
+  parameters:
+    - $ref: "../components/parameters.yaml#/Path_UserID"
+  responses:
+    "200":
+      $ref: "../components/responses.yaml#/GetUserByID"
+put:
+  summary: Update user
+  tags:
+    - users
+  parameters:
+    - $ref: "../components/parameters.yaml#/Path_UserID"
+  responses:
+    "200":
+      $ref: "../components/responses.yaml#/UpdateUser"
+delete:
+  summary: Delete user
+  tags:
+    - users
+  parameters:
+    - $ref: "../components/parameters.yaml#/Path_UserID"
+    - $ref: "../../../common/components/parameters.yaml#/Query_DeletionMode"
+  responses:
+    "200":
+      $ref: "../components/responses.yaml#/DeleteUser"

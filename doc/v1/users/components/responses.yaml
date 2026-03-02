@@ -1,3 +1,4 @@
+# v1/users/components/responses.yaml
 CreateUser:
   description: Create user success
   content:
@@ -6,6 +7,36 @@ CreateUser:
         type: object
         properties:
           id:
-            $ref: "../components/schemas.yaml#/UserID"
-          createdAt:
-            $ref: "../../../common/components/schemas.yaml#/DateTime"
+            $ref: "./schemas.yaml#/UserID"
+ListUser:
+  description: List user success
+  content:
+    application/json:
+      schema:
+        type: array
+        items:
+          $ref: "./schemas.yaml#/User"
+GetUserByID:
+  description: Get user by id success
+  content:
+    application/json:
+      schema:
+        $ref: "./schemas.yaml#/User"
+UpdateUser:
+  description: Update user success
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          id:
+            $ref: "./schemas.yaml#/UserID"
+DeleteUser:
+  description: Delete user success
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          id:
+            $ref: "./schemas.yaml#/UserID"
