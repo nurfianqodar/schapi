@@ -14,6 +14,8 @@ put:
     - users
   parameters:
     - $ref: "../components/parameters.yaml#/Path_UserID"
+  requestBody:
+    $ref: "../components/requestBodies.yaml#/UpdateUser"
   responses:
     "200":
       $ref: "../components/responses.yaml#/UpdateUser"

@@ -12,3 +12,16 @@ CreateUser:
             $ref: "../components/schemas.yaml#/Password"
           role:
             $ref: "../components/schemas.yaml#/UserRole"
+UpdateUser:
+  description: Update user request
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          email:
+            $ref: "../components/schemas.yaml#/Email"
+          password:
+            $ref: "../components/schemas.yaml#/Password"
+          role:
+            $ref: "../components/schemas.yaml#/UserRole"
