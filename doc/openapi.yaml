@@ -1,0 +1,13 @@
+# OpenAPI 3.1.1
+openapi: 3.1.1
+# info
+info:
+  title: Schapi
+  version: 0.0.1-dev
+  description: Schapi documentation
+# paths
+paths:
+  /api/v1/users:
+    $ref: "./v1/users/paths/root.yaml"
+  /api/v1/users/{id}:
+    $ref: "./v1/users/paths/id.yaml"

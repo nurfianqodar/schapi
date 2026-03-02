@@ -1,0 +1,21 @@
+UserID:
+  type: string
+  format: uuid
+  example: 2bf10c20-0331-457d-a5d5-c5eff548b5c9
+Email:
+  type: string
+  format: email
+  example: users@email.com
+Password:
+  type: string
+  format: password
+  example: secret1234
+UserRole:
+  type: string
+  enum:
+    - admin
+    - principal
+    - staff
+    - teacher
+    - student
+    - parent

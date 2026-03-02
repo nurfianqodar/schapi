@@ -1,0 +1,5 @@
+summary: User specific operation endpoint
+get:
+  summary: Get user by id
+  tags:
+    - users

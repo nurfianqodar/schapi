@@ -1,0 +1,14 @@
+summary: General user management endpoint
+get:
+  tags:
+    - users
+  summary: List users
+post:
+  tags:
+    - users
+  summary: Create users
+  requestBody:
+    $ref: "../components/requestBodies.yaml#/CreateUser"
+  responses:
+    "201":
+      $ref: "../components/responses.yaml#/CreateUser"

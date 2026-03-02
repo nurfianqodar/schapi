@@ -1,0 +1,11 @@
+CreateUser:
+  description: Create user success
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          id:
+            $ref: "../components/schemas.yaml#/UserID"
+          createdAt:
+            $ref: "../../../common/components/schemas.yaml#/DateTime"
